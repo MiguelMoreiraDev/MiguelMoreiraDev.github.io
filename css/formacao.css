@@ -1,0 +1,110 @@
+.formacao-container {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+  color: white;
+  position: relative;
+}
+
+.formacao {
+  background-color: #141414;
+}
+
+.formacao-container .subtitulo {
+  color: #292929;
+  max-width: 6ch;
+  line-height: 1;
+}
+
+.formacao-container::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url(../img/Detalhe.svg) no-repeat center;
+  position: absolute;
+  bottom: -50px;
+}
+
+.formacao-container2 {
+  justify-content: end;
+  display: grid;
+  /* align-items: center; */
+  align-content: center;
+  gap: 60px;
+}
+
+.formacao-texto {
+  color: #a3a3a3;
+  font-family: "Fira Sans";
+  font-size: 1.5rem;
+  line-height: 1.33;
+  /* margin-bottom: 60px; */
+  max-width: 40ch;
+}
+
+.formacao-texto strong {
+  color: #f5f5f5;
+}
+
+.curso-container {
+  background-color: #090909;
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.curso-container::before {
+  content: "";
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  display: block;
+  background: linear-gradient(#f8d685, #e18763);
+  top: 20px;
+  left: -4px;
+}
+
+.curso-titulo {
+  color: #a3a3a3;
+  font-family: "Fira Sans";
+  font-size: 0.875rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.curso {
+  color: #f5f5f5;
+  font-family: "Abril Fatface";
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.curso-local {
+  color: #e18763;
+  font-family: "Fira Sans";
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+@media (max-width: 800px) {
+  .formacao-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .formacao-container .subtitulo {
+    max-width: initial;
+    color: #f5f5f5;
+  }
+
+  .formacao-container2 {
+    justify-content: start;
+    align-items: start;
+    gap: 60px;
+  }
+}

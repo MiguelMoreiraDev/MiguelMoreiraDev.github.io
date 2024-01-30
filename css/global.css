@@ -1,0 +1,27 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.subtitulo {
+  font-family: "Abril Fatface", serif;
+  font-size: 9rem;
+  line-height: 1;
+  max-width: 4ch;
+  word-break: break-all;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 2rem;
+    max-width: initial;
+    text-transform: capitalize;
+  }
+}

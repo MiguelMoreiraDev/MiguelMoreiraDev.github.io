@@ -1,0 +1,116 @@
+.experiencia {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 140px;
+}
+
+.experiencia .subtitulo {
+  color: #e0e0e0;
+  max-width: 4ch;
+}
+
+.experiencia-texto {
+  color: #525252;
+  font-family: "Fira Sans";
+  font-size: 1.5rem;
+  line-height: 1.33;
+  margin-bottom: 60px;
+  max-width: 40ch;
+}
+
+.experiencia-texto strong {
+  color: #141414;
+}
+
+.empresa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  border: 1px solid #e0e0e0;
+  gap: 10px 100px;
+  border-radius: 5px;
+}
+
+.empresa::before {
+  content: "";
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  display: block;
+  background: linear-gradient(#f8d685, #e18763);
+  top: 20px;
+  left: -4px;
+}
+
+.empresa-ano {
+  font-family: "Fira Sans";
+  position: absolute;
+  top: 22px;
+  left: -100px;
+  color: #525252;
+  font-size: 0.875rem;
+  text-align: right;
+  width: 80px;
+}
+
+.empresa-titulo {
+  font-size: 1.25rem;
+  color: #141414;
+  font-weight: bold;
+  font-family: "Abril Fatface", serif;
+}
+
+.empresa-texto {
+  color: #525252;
+  font-size: 0.875rem;
+  line-height: 1.42;
+  font-family: "Fira Sans";
+}
+
+.empresa-habilidades {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: start;
+}
+.empresa-habilidades li {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.875rem;
+  line-height: 1.42;
+  font-family: "Fira Sans";
+}
+
+@media (max-width: 800px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+  }
+  .experiencia .subtitulo {
+    color: #141414;
+    max-width: initial;
+  }
+  .experiencia {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .empresa {
+    grid-template-columns: 1fr;
+  }
+  .empresa-ano {
+    position: initial;
+    order: 1;
+    text-align: left;
+  }
+  .empresa-ano::before {
+    content: "Ano: ";
+  }
+}
